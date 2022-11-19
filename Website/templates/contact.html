@@ -1,0 +1,16 @@
+<!--This template is going to be exact same as base.html-->
+<!--And we can override every block that were defined inside base.html-->
+{% extends "base.html"%}
+<!--If we rename this block called "Home" we should see changes in result-->
+<!--Easy way to rename stuff-->
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/menu.css') }}">
+<h1> Contact </h1>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.9588562469544!2d24.799199015841932!3d59.400398912364544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692eb40aeb8ebc9%3A0xfa59d2cb30e29afa!2sSuurekivi%20tee%2064%2C%20Peetri%2C%2075312%20Harju%20maakond!5e0!3m2!1sru!2see!4v1648317342826!5m2!1sru!2see" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+{% endblock %}

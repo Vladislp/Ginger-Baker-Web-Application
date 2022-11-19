@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Bootstrap
+          1) Right here is the link to what's called a CDN. CDN is a content delivery network.
+             It will allow you to actually load without downloading the file, a bunch of custom CSS and JavaScript
+          2) In this case we are loading CSS, and we can tell that because this is defined as a "Stylesheet" : rel="stylesheet"
+          3) It also containse a bunch of classes, that we can use for out HTML elements, just to make the look nicer
+        -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          crossorigin="anonymous"
+        />
+        <link 
+          rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"
+        />
+        
+        <!--Templating engine / Jenga-->
+        <!--When you are writing block (for loop) or smth...you put them here-->
+        <title>{% block title %}Home{% endblock %} </title>
+    </head>
+
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!--Navbar button-->
+        <!--First is going to be a button, which allows us to expand navbar if we are on mobile device-->
+        <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#navbar">
+          <!--Icon for the button-->
+          <span class ="navbar-toggler-icon"> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" id="login" href="/">About</a>
+            <a class="nav-item nav-link" id="login" href="/menu">Menu</a>
+            <a class="nav-item nav-link" id="login" href="/contact">Contact</a>
+            <!--<a class="nav-item nav-link" id="login" href="/notes">Notes</a>-->
+            <a class="nav-item nav-link" id="login" href="/blog">Blog</a>
+            <!--<a class="nav-item nav-link" id="login" href="/logout">Logout</a>-->
+            <!--<a class="nav-item nav-link" id="login" href="/cart">Cart</a>-->
+          </div>
+        </div>
+      </nav> <!--Whetever we are putting inside this block, will show up on our screen-->
+      
+      <!--Define a variable called "messages" which is equal to get flashed messages-->
+      <!--This is going to get all messages with there categories, that we flashed-->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      <!--We loop now all messages and show them in the page-->
+      {% if messages %}
+        {% for category, message in messages %}
+        {% if category == 'error' %}
+        <!--Display the message, whatever it is-->
+        <div class='alert alert-dark alter-dismissable fade show' role="alert" style="position:absolute; left: 20%; transform: translate(-50%, 30%);">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% else %}
+        <div class="alert alert-dark alter-dismissable fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% endwith %}
+
+
+      <div class="container">{% block content %} {% endblock %}</div>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='index.js') }}"
+    ></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!--This template is going to be exact same as base.html-->
+<!--And we can override every block that were defined inside base.html-->
+<!--If we rename this block called "Login" we should see changes in result-->
+<!--Easy way to rename stuff-->
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+    %}
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+
+    <div class="bg-img">
+    <form method="POST">
+      <h3 align="center">Login</h3>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Enter email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+        />
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Login</button>
+      <div class="social">
+        <div class="go"><i class="fab fa-google"></i>  Google</div>
+        <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+      </div>
+    </form>
+  </div>
+
+    <body>
+      <div class="hero">
+  
+      </div>
+  </body>
+    {% endblock %}

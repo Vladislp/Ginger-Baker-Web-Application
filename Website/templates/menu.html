@@ -1,0 +1,70 @@
+<!--This template is going to be exact same as base.html-->
+<!--And we can override every block that were defined inside base.html-->
+{% extends "base.html"%}
+<!--If we rename this block called "Home" we should see changes in result-->
+<!--Easy way to rename stuff-->
+{% block title %}Menu{% endblock %}
+
+{% block content %}
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/menu.css') }}">
+<body>
+    <head>
+        <script
+        type="text/javascript"
+        src="{{ url_for('static', filename='menu.js') }}"
+        async
+      ></script>
+    </head>
+  
+  <h1 class="band-name band-name-large">The Bread Whisperer</h1>
+  <section class="container content-section">
+      <h2 class="section-header">Sweets</h2>
+
+      <div class="shop-items">
+          <div class="shop-item">
+              <span class="shop-item-title">BananaBread</span>
+              <img class="shop-item-image" src="https://images.pexels.com/photos/1277202/pexels-photo-1277202.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€6.66</span>
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+          </div>
+
+      <div class="shop-item">
+        <span class="shop-item-title">Chocolate chip cookie</span>
+            <img class="shop-item-image" src="https://images.unsplash.com/photo-1532499016263-f2c3e89de9cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80">
+            <div class="shop-item-details">
+                <span class="shop-item-price">€14.99</span>
+                <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+            </div>
+      </div>
+      </div>
+  </section>
+  
+  <section class="container content-section">
+      <h2 class="section-header">CART</h2>
+      <div class="cart-row">
+          <span class="cart-item cart-header cart-column">ITEM</span>
+          <span class="cart-price cart-header cart-column">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+      </div>
+
+      <div class="cart-items">
+          
+      </div>
+      <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="cart-total-price">€0</span>
+      </div>
+      <form action="/payment" method="POST">
+        <button class="btn btn-primary btn-purchase" type="submit">PURCHASE</button>
+      </form>
+      <!--
+      <form action="/create-checkout-session" method="POST">
+        <button class="btn btn-primary btn-purchase" type="submit">PURCHASE</button>
+      </form>
+      -->
+  </section>
+</body>
+{% endblock %}

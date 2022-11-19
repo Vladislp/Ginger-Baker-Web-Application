@@ -1,0 +1,55 @@
+<!--This template is going to be exact same as base.html-->
+<!--And we can override every block that were defined inside base.html-->
+{% extends "base.html"%}
+<!--If we rename this block called "Home" we should see changes in result-->
+<!--Easy way to rename stuff-->
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/blog.css') }}">
+<h1> Blog </h1>
+
+<div class="header">
+    <h2>Life of a ginger baker</h2>
+  </div>
+  
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>New Recipes</h2>
+        <h5>Just made new banana bread with love, May 26, 2022</h5>
+        <img src="https://images.101cookbooks.com/banana-bread-recipe-2019-h.jpg?w=680" alt="BananaBread"> 
+        <p>Banana bread recipes began being featured in well-known cookbooks across North America as baking soda and baking powder were being mass produced and becoming available in grocery stores in the 1930s. It appeared in Pillsbury's 1933 Balanced Recipes cookbook, and later gained more acceptance with the release of the original Chiquita Banana's Recipe Book in 1950.</p>
+      </div>
+      <div class="card">
+        <h2>Chocolate chip cookie</h2>
+        <h5>Brand new belgium choco chip muffin, Sep 2, 2012</h5>
+        <img src="https://sugargeekshow.com/wp-content/uploads/2019/10/chocolate-chip-muffins-featured.jpg" alt="Muffin">
+        <p>A muffin is an individually portioned baked product, however the term can refer to one of two distinct items: a part-raised flatbread (like a crumpet) that is baked and then cooked on a griddle (typically unsweetened), or an (often sweetened) quickbread (like a cupcake) that is chemically leavened and then baked in a mold. While quickbread "American" muffins are often sweetened, there are savory varieties made with ingredients such as corn and cheese, and less sweet varieties like traditional bran muffins. The flatbread "English" variety is of British or other European derivation, and dates from at least the early 18th century, while the quickbread originated in North America during the 19th century. Both types are common worldwide today. </p>
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>About Me</h2>
+        <img src="https://i.pinimg.com/280x280_RS/b2/86/76/b28676b49d18218afbbae3c13a1fb03d.jpg" alt="Nastja">
+        <p>Born in Maardu...yes</p>
+      </div>
+      <div class="card">
+        <h3>Popular Post</h3>
+        <div class="fakeimg">Image</div><br>
+        <div class="fakeimg">Image</div><br>
+        <div class="fakeimg">Image</div>
+      </div>
+      <div class="card">
+        <h3>Follow Me</h3>
+        <p>Some text..</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <h2>Footer</h2>
+  </div> 
+
+{% endblock %}

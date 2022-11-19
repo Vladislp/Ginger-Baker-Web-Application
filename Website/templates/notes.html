@@ -1,0 +1,29 @@
+<!--This template is going to be exact same as base.html-->
+<!--And we can override every block that were defined inside base.html-->
+{% extends "base.html"%}
+<!--If we rename this block called "Home" we should see changes in result-->
+<!--Easy way to rename stuff-->
+{% block title %}Notes{% endblock %}
+
+{% block content %}
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/notes.css') }}">
+
+<h1 align="center">Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item">{{ note.data }}
+        <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </li>
+    {% endfor %}
+</ul>
+<form method="POST">
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <br />
+    <div align="center">
+        <button type="submit" class="btn btn-primary"> Add Note </button>
+    </div>
+</form>
+{% endblock %}

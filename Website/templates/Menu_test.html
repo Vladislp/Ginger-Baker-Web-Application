@@ -1,0 +1,48 @@
+<!--This template is going to be exact same as base.html-->
+<!--And we can override every block that were defined inside base.html-->
+{% extends "base.html"%}
+<!--If we rename this block called "Home" we should see changes in result-->
+<!--Easy way to rename stuff-->
+{% block title %}Menu{% endblock %}
+
+{% block content %}
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/menu.css') }}">
+<h1> Menu </h1>
+
+<div class="Cookie">
+  <!--Without copyright picture-->
+  <img src="https://images.unsplash.com/photo-1532499016263-f2c3e89de9cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="Cookie" style="width:100%">
+  <h1>Chocolate Cookie</h1>
+  <p class="price">€5</p>
+  <p>Something about cookie</p>
+
+  {% for product in products %}
+    <div class="product-item"
+  {% endfor %}
+
+
+  <form method="POST">
+    <div align="center">
+        <button type="submit" class="btn btn-primary"> Add to cart </button>
+    </div>
+</form>
+</div>
+
+<div class="Bread">
+  <img src="https://images.pexels.com/photos/1277202/pexels-photo-1277202.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="BananaBread" style="width:100%">
+
+  <h1>Banana Bread</h1>
+  <p class="price">€5</p>
+  <p>Comes with love</p>
+
+
+  <form method="POST">
+    <div align="center">
+        <button type="submit" class="btn btn-primary"> Add to cart </button>
+    </div>
+  </form>
+</div>
+
+
+{% endblock %}
