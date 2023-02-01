@@ -3,26 +3,83 @@
 {% extends "base.html"%}
 <!--If we rename this block called "Home" we should see changes in result-->
 <!--Easy way to rename stuff-->
-{% block title %}About{% endblock %}
+{% block title %}About{% endblock %} {% block content %}
 
-{% block content %}
-
-<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
-
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
-  
-      <div class="w3-col m6 w3-padding-large">
-        <h1 class="w3-center">About Catering</h1><br>
-        <h5 class="w3-center">Tradition since 1889</h5>
-        <p class="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
-        <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static',filename='styles/home.css') }}"
+/>
+<body>
+  <div class="container">
+      <div class="header">
+        <h1>Welcome to Our Bakery Shop</h1>
+        <p>Fresh Baked Goodies Made with Love</p>
+      </div>
+  </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="bakery-shop-image.jpg" alt="" />
+        </div>
+        <div class="col-md-6">
+          <h2>About Our Bakery</h2>
+          <p>
+            At our bakery, we believe that baking is an art form and a way to
+            bring happiness to people's lives. We use only the freshest
+            ingredients and take great care in crafting each and every one of
+            our baked goods. From our classic cakes and pastries to our
+            innovative desserts, there's something for everyone here at our
+            bakery.
+          </p>
+          <a href="/menu" class="btn btn-primary">View Our Menu</a>
+        </div>
       </div>
     </div>
-  
-  <!-- End page content -->
-  </div>
 
+    <div class="featured">
+      <h2>Featured Products</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pixabay.com/photo/2017/06/30/21/49/bread-2459926_1280.jpg"
+            alt="Cake"
+          />
+          <h3>Delicious Cakes</h3>
+          <p>
+            Our cakes are made with love and only the freshest ingredients. Try
+            one today!
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pixabay.com/photo/2016/05/10/09/14/cookies-1383304_1280.jpg"
+            alt="Pastry"
+          />
+          <h3>Flaky Pastries</h3>
+          <p>
+            Flaky and buttery, our pastries are the perfect start to your day.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pixabay.com/photo/2018/05/03/14/50/muffins-3371523_1280.jpg"
+            alt="Dessert"
+          />
+          <h3>Innovative Desserts</h3>
+          <p>
+            Our desserts are always pushing the boundaries of what's possible in
+            baking.
+          </p>
+        </div>
+    </div>
+    </div>
+
+    <div class="footer">
+      <p>Copyright &copy; Baking Fox</p>
+    </div>
+    -->
+</body>
 
 {% endblock %}

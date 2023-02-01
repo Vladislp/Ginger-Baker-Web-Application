@@ -13,6 +13,7 @@ html, body {
 
 .nav ul {
     margin: 0;
+    color: black;
 }
 
 .nav li {
@@ -22,8 +23,12 @@ html, body {
 .nav a {
     display: inline-block;
     padding: .5em;
-    color: white;
+    color: black; /* Change color here */
     text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: white; /* Change color here */
 }
 
 .main-nav {
@@ -37,9 +42,7 @@ html, body {
     padding: 0 5%;
 }
 
-.nav a:hover {
-    background-color: rgba(255, 255, 255, .3)
-}
+
 
 .main-header {
     background-color: rgba(0, 0, 0, .6);
