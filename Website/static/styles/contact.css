@@ -1,6 +1,54 @@
 body {
-    background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/02/bakery-16.jpg);
+    background-image: url(https://cdn.pixabay.com/photo/2021/01/31/13/07/croissants-5966836_1280.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 
     font-family: "Playfair Display";
     letter-spacing: 5px;
 }
+
+.contact-section {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    color: white
+  }
+
+  h2 {
+    color: white;
+  }
+
+  p {
+    color: white;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .contact-info {
+    text-align: center;
+  }
+  
