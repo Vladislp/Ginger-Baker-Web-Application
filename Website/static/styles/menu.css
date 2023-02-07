@@ -1,11 +1,11 @@
 * {
     box-sizing: border-box;
-    font-family: Raleway;
     color: #777;
 }
 
 html, body {
-    font-family: Arial, sans-serif;
+   font-family: "Playfair Display";
+
     background-image: url(https://cdn.pixabay.com/photo/2021/01/31/13/07/croissants-5966836_1280.jpg);
     background-attachment: fixed;
     background-size: cover;

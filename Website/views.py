@@ -45,32 +45,6 @@ def delete_note():
 
     return jsonify({})
 
-#stripe.api_key = 'sk_test_51KibcBIEGhScLw0TaKrfJit7i1dKKZS6QzqTuhxX0DIDrAOFbIfUpVCL30TDHmjwGag9YgWrJY3420wmNs89Apa200GFBp1qp6'
-
-#@views.route('/create-checkout-session', methods=['POST'])
-#def create_checkout_session():
-#  session = stripe.checkout.Session.create(
-#    payment_method_types=['card'],
-#    line_items=[{
-#      'price_data': {
-#        'currency': 'eur',
-#        'product_data': {
-#          'name': 'T-shirt',
-#        },
-#        
-#      },
-#      
-#    }],
-#    mode='payment',
-#    success_url='http://127.0.0.1:5000/success',
-#    cancel_url='http://127.0.0.1:5000/cancel',
-#  )
-
-#  return redirect(session.url, code=303)
-
-
-
-
 # Decorator are an elegent way to extend functionality of our original function, without altering their source code.
 # '/' --> route
 @views.route('/', methods=['GET', 'POST'])
@@ -102,10 +76,6 @@ def add_to_cart():
 @views.route('/payment', methods=['GET', 'POST'])
 def payment():
     return render_template("payment.html", user=current_user)
-
-@views.route('/success', methods=['GET', 'POST'])
-def success():
-    return render_template("success.html", user=current_user)
 
 @views.route('/cancel', methods=['GET', 'POST'])
 def cancel():

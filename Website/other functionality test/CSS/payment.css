@@ -1,5 +1,8 @@
 body {
-    background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/02/bakery-16.jpg);
+    background-image: url(https://cdn.pixabay.com/photo/2021/01/31/13/07/croissants-5966836_1280.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 .rounded {
