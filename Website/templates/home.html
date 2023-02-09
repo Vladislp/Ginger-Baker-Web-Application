@@ -24,32 +24,32 @@
           <img src="bakery-shop-image.jpg" alt="" />
         </div>
         <div class="col-md-6">
-          <h2>About Our Bakery</h2>
+          <h2>{{ gettext("About Our Bakery") }}</h2>
           <p>
-            At our bakery, we believe that baking is an art form and a way to
+            {{ gettext("At our bakery, we believe that baking is an art form and a way to
             bring happiness to people's lives. We use only the freshest
             ingredients and take great care in crafting each and every one of
             our baked goods. From our classic cakes and pastries to our
             innovative desserts, there's something for everyone here at our
-            bakery.
+            bakery.") }}
           </p>
-          <a href="/menu" class="btn btn-primary">View Our Menu</a>
+          <a href="/menu" class="btn btn-primary">{{ gettext("View Our Menu") }}</a>
         </div>
       </div>
     </div>
 
     <div class="featured">
-      <h2>Featured Products</h2>
+      <h2>{{ gettext("Featured Products") }}</h2>
       <div class="row">
         <div class="col-md-4">
           <img
             src="https://cdn.pixabay.com/photo/2017/06/30/21/49/bread-2459926_1280.jpg"
             alt="Cake"
           />
-          <h3>Delicious Cakes</h3>
+          <h3>{{ gettext("Delicious Cakes") }}</h3>
           <p>
-            Our cakes are made with love and only the freshest ingredients. Try
-            one today!
+            {{ gettext("Our cakes are made with love and only the freshest ingredients. Try
+            one today!") }}
           </p>
         </div>
         <div class="col-md-4">
@@ -57,9 +57,9 @@
             src="https://cdn.pixabay.com/photo/2016/05/10/09/14/cookies-1383304_1280.jpg"
             alt="Pastry"
           />
-          <h3>Flaky Pastries</h3>
+          <h3>{{ gettext("Flaky Pastries") }}</h3>
           <p>
-            Flaky and buttery, our pastries are the perfect start to your day.
+            {{ gettext("Flaky and buttery, our pastries are the perfect start to your day.") }}
           </p>
         </div>
         <div class="col-md-4">
@@ -67,19 +67,18 @@
             src="https://cdn.pixabay.com/photo/2018/05/03/14/50/muffins-3371523_1280.jpg"
             alt="Dessert"
           />
-          <h3>Innovative Desserts</h3>
+          <h3>{{ gettext("Innovative Desserts") }}</h3>
           <p>
-            Our desserts are always pushing the boundaries of what's possible in
-            baking.
+            {{ gettext("Our desserts are always pushing the boundaries of what's possible in
+            baking.") }}
           </p>
         </div>
     </div>
-    </div>
+  </div>
 
     <div class="footer">
-      <p>Copyright &copy; Foxy Bake</p>
+      <p> {{ gettext("Copyright &copy; Foxy Bake") }}</p>
     </div>
-    -->
 </body>
 
 {% endblock %}

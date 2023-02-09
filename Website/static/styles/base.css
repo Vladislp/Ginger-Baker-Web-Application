@@ -1,41 +1,42 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, p, ol, ul, li, header {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
 .header-top {
+  background-color: #00000053;
+  display: flex;
+  align-items: center;
   height: 30px;
-  padding-top: 0;
-  padding-left: 80px;
-  padding-right: 80px;
-  display: flex;
-  -webkit-box-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  background-color: #f8f8f8;;
+  padding: 0 80px;
 }
 
-.header-top, .header-bottom {
-  padding-top: 0;
-  padding-left: 80px;
-  padding-right: 80px;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
+.header-bottom,
+.header-top {
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
 }
-
 
 .header-logo img {
-  display:flexbox;
+  display: flex;
   height: 100px;
-  margin-top: 10px;
+  margin-top: 1px;
 }
 
 .header-icons li a i {
@@ -43,131 +44,45 @@
   width: 17px;
 }
 
-
-*, ::after, ::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  border: 0;
-  font: inherit;
-  font-size: inherit;
-  font-size: 100%;
-  margin: 0;
-  padding: 0;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
-  vertical-align: top;
-}
-
 .header-languages {
   list-style: none;
   padding: 0;
-}
-
-/* Отвечает за расстояние между EST / ENG / RUS */
-.header-languages li:not(:last-child) {
-  margin-right: 10px;
-}
-
-.header-bottom {
-  height: auto;
-  position: fixed;
-  left: 0;
-  top: 30px;
-  width: 100%;
 }
 
 .header-languages li {
   font-size: 14px;
   font-weight: 600;
   line-height: 18px;
+  position: initial;
+}
+
+.header-languages li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.header-bottom {
+  background-color: #00000053;
+  height: 120px;
+  left: 0;
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  z-index: 9999;
 }
 
 .header-icons li,
 .header-languages li,
 .header-navigation li {
+  cursor: pointer;
   display: inline;
   font-family: "Open Sans", sans-serif;
-  cursor: pointer;
-  position:initial;
   overflow: hidden;
 }
 
 .header-navigation-ul li {
+  color: #000000;
   font-size: 13px;
   font-weight: 600;
-  color: #000000;
 }
 
 .header-navigation-ul li:not(:last-child) {

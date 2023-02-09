@@ -9,6 +9,8 @@ body {
 
 iframe {
   position: relative;
+  margin-top: 185px;
+  margin-right: 600px;
 }
 .map-container {
   display: flex;
@@ -35,4 +37,15 @@ iframe {
   flex-basis: auto;
   align-self: auto;
   order: 0;
+}
+
+.info-container {
+  width: 55%;
+  position: absolute;
+  right: 0;
+  top: 37%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 20px;
+  color: white;
 }
