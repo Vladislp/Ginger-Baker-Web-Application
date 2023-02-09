@@ -13,24 +13,20 @@
   href="{{ url_for('static',filename='styles/contact.css') }}"
 />
 
-<div class="contact-section">
-    <h1>Contact Us</h1>
-    <form action="#" method="post">
-      <input type="text" name="name" placeholder="Your name">
-      <input type="email" name="email" placeholder="Your email">
-      <textarea name="message" placeholder="Your message"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-    
-    <div class="contact-info">
-      <h2>Visit Us</h2>
-      <p>Suurekivi tee 64</p>
-      <p>Baking fox</p>
-      <h2>Call Us</h2>
-      <p>(372) 5806 6561</p>
-      <h2>Email Us</h2>
-      <p>bakery@email.com</p>
-    </div>
-  </div>
+<div class="map-container">
+  <iframe src=
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.955829356235!2d24.799220915841975!3d59.40044941236051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692eb40ae95bf5d%3A0x5e557f2426b8325c!2sSuurekivi%20tee%2064%2C%20Peetri%2C%2075312%20Harju%20maakond!5e0!3m2!1sru!2see!4v1675779119102!5m2!1sru!2see" 
+    width="600" 
+    height="450" 
+    style="border:2;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<div class="infobox-container">
+  
+</div>
   
 {% endblock %}

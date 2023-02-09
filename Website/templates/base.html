@@ -17,6 +17,11 @@
         <link 
           rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"
         />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="{{ url_for('static',filename='styles/base.css') }}"
+/>
         
         <!--Templating engine / Jenga-->
         <!--When you are writing block (for loop) or smth...you put them here-->
@@ -24,6 +29,70 @@
     </head>
 
     <body>
+      <div class="header-top">
+        <ul class="header-languages">
+          <ul class="language-switcher-locale-url">
+            <li class="en">
+              <a href="/en/home">ENG</a>
+            </li>
+            <li class="ee">
+              <a href="/ee/home">EST</a>
+            </li>
+            <li class="ru">
+              <a href="/ru/home">RUS</a>
+            </li>
+          </ul>
+        </ul>
+        <ul class="header-icons">
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/">
+              <i class="fa fa-facebook">
+              </i>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkein.com/">
+              <i class="fa fa-linkedin">   
+              </i>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/">
+              <i class="fa fa-instagram">
+              </i>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/">
+              <i class="fa fa-twitter">
+              </i>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.telegram.com/">
+              <i class="fa fa-telegram">
+              </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="header-bottom">
+        <a class="header-logo" href="/">
+          <img src="https://i.pinimg.com/736x/e2/c7/09/e2c709bbf86bef7787d16018785d15db.jpg" alt="Logo">
+        </a>
+        <nav class="header-navigation">
+          <ul class="header-navigation-ul">
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/menu">Menu</a></li>
+            <li><a href="/en/why-relocate-to-estonia">Why Estonia?</a></li>
+            <li><a href="/en/vacancies">Vacancies</a></li>
+            <li><a href="/en/blog">Blog</a></li>
+        </ul>
+        </nav>
+      </div>
+      </div>
+      <!--
       <nav class="navbar navbar-expand-lg navbar-dark">
         <!--Navbar button-->
         <!--First is going to be a button, which allows us to expand navbar if we are on mobile device-->
@@ -38,8 +107,8 @@
             <a class="nav-item nav-link" id="login" href="/contact">Contact</a>
           </div>
         </div>
-      </nav> <!--Whetever we are putting inside this block, will show up on our screen-->
       
+      </nav> <!--Whetever we are putting inside this block, will show up on our screen-->
       <!--Define a variable called "messages" which is equal to get flashed messages-->
       <!--This is going to get all messages with there categories, that we flashed-->
       {% with messages = get_flashed_messages(with_categories=true) %}
