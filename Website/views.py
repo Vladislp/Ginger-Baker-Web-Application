@@ -8,7 +8,6 @@ from flask_login import login_required, current_user
 from .models import Note
 from . import db
 import json
-import stripe
 
 
 # Setup blueprint for Flask application
@@ -65,22 +64,54 @@ def menu():
 def contact():
     return render_template("contact.html", user=current_user)
 
-@views.route('/blog', methods=['GET', 'POST'])
-def blog():
-    return render_template("blog.html", user=current_user)
-
 @views.route('/cart', methods=['GET', 'POST'])
 def add_to_cart():
     return render_template("cart.html", user=current_user)
 
-@views.route('/payment', methods=['GET', 'POST'])
-def payment():
-    return render_template("payment.html", user=current_user)
+@views.route('/home_EST', methods=['GET', 'POST'])
+# Now you can not get to the home page, unless you are login
+@login_required
+# This function will whenever we go to the slash route 
+def home_EST():
+    # We will be able to check, if we have authenticated
+    return render_template("home_EST.html", user=current_user)
 
-@views.route('/cancel', methods=['GET', 'POST'])
-def cancel():
-    return render_template("cancel.html", user=current_user)
+@views.route('/contact_EST', methods=['GET', 'POST'])
+# Now you can not get to the home page, unless you are login
+@login_required
+# This function will whenever we go to the slash route 
+def contact_EST():
+    # We will be able to check, if we have authenticated
+    return render_template("contact_EST.html", user=current_user)
 
+@views.route('/menu_EST', methods=['GET', 'POST'])
+# Now you can not get to the home page, unless you are login
+@login_required
+# This function will whenever we go to the slash route 
+def menu_EST():
+    # We will be able to check, if we have authenticated
+    return render_template("menu_EST.html", user=current_user)
 
+@views.route('/home_RUS', methods=['GET', 'POST'])
+# Now you can not get to the home page, unless you are login
+@login_required
+# This function will whenever we go to the slash route 
+def home_RUS():
+    # We will be able to check, if we have authenticated
+    return render_template("home_RUS.html", user=current_user)
 
+@views.route('/menu_RUS', methods=['GET', 'POST'])
+# Now you can not get to the home page, unless you are login
+@login_required
+# This function will whenever we go to the slash route 
+def menu_RUS():
+    # We will be able to check, if we have authenticated
+    return render_template("menu_RUS.html", user=current_user)
 
+@views.route('/contact_RUS', methods=['GET', 'POST'])
+# Now you can not get to the home page, unless you are login
+@login_required
+# This function will whenever we go to the slash route 
+def contact_RUS():
+    # We will be able to check, if we have authenticated
+    return render_template("contact_RUS.html", user=current_user)

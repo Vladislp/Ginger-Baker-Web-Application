@@ -1,9 +1,9 @@
 <!--This template is going to be exact same as base.html-->
 <!--And we can override every block that were defined inside base.html-->
-{% extends "base.html"%}
+{% extends "base_RUS.html"%}
 <!--If we rename this block called "Home" we should see changes in result-->
 <!--Easy way to rename stuff-->
-{% block title %}Menu{% endblock %}
+{% block title %}Меню{% endblock %}
 
 {% block content %}
 
@@ -17,44 +17,44 @@
       ></script>
     </head>
   
-  <h1 class="shop-name">Our menu</h1>
+  <h1 class="shop-name">Наше меню</h1>
   <section class="menu-container content-section">
-      <h2 class="section-header">Sweets</h2>
+      <h2 class="section-header">Сладости</h2>
 
       <div class="shop-items">
           <div class="shop-item">
-              <span class="shop-item-title">BananaBread</span>
+              <span class="shop-item-title">Банановый хлеб</span>
               <img class="shop-item-image" src="https://images.pexels.com/photos/1277202/pexels-photo-1277202.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
               <div class="shop-item-details">
                   <span class="shop-item-price">€6.66</span>
-                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                  <button class="btn btn-primary shop-item-button" type="button">ДОБАВИТЬ В КОРЗИНУ</button>
               </div>
           </div>
 
       <div class="shop-item">
-        <span class="shop-item-title">Chocolate chip cookie</span>
+        <span class="shop-item-title">Шоколадное печенье</span>
             <img class="shop-item-image" src="https://images.unsplash.com/photo-1532499016263-f2c3e89de9cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80">
             <div class="shop-item-details">
                 <span class="shop-item-price">€14.99</span>
-                <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                <button class="btn btn-primary shop-item-button"type="button">ДОБАВИТЬ В КОРЗИНУ</button>
             </div>
       </div>
       </div>
   </section>
   
   <section class="container content-section">
-      <h2 class="section-header">Check price</h2>
+      <h2 class="section-header">Узнать цену</h2>
       <div class="cart-row">
-          <span class="cart-item cart-header cart-column">ITEM</span>
-          <span class="cart-price cart-header cart-column">PRICE</span>
-          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+          <span class="cart-item cart-header cart-column">ЭЛЕМЕНТ</span>
+          <span class="cart-price cart-header cart-column">ЦЕНА</span>
+          <span class="cart-quantity cart-header cart-column">КОЛИЧЕСТВО</span>
       </div>
 
       <div class="cart-items">
           
       </div>
       <div class="cart-total">
-          <strong class="cart-total-title">Total</strong>
+          <strong class="cart-total-title">Вместе</strong>
           <span class="cart-total-price">€0</span>
       </div>
       <form action="/payment" method="POST">

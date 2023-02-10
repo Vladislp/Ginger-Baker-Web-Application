@@ -1,0 +1,84 @@
+<!--This template is going to be exact same as base.html-->
+<!--And we can override every block that were defined inside base.html-->
+{% extends "base_RUS.html"%}
+<!--If we rename this block called "Home" we should see changes in result-->
+<!--Easy way to rename stuff-->
+{% block title %}О нас{% endblock %} {% block content %}
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static',filename='styles/home.css') }}"
+/>
+<body>
+  <div class="container">
+      <div class="header">
+        <h1>Мы приведствуем вас в Dreamy Fox Bakery & Cafe</h1>
+        <p>Свежая выпечка, приготовленная с любовью</p>
+      </div>
+  </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="bakery-shop-image.jpg" alt="" />
+        </div>
+        <div class="col-md-6">
+          <h2>О нашей пекарне</h2>
+          <p>
+            В нашей пекарне мы верим, что выпечка — это искусство и способ
+            принести счастье в жизнь людей. Мы используем только самые свежие
+            ингредиентов и проявляйте большую осторожность при изготовлении каждого из
+            наша выпечка. От наших классических тортов и пирожных до наших
+            инновационные десерты, каждый найдет что-то для себя в нашем
+            пекарня.
+          </p>
+          <a href="/menu" class="btn btn-primary">Посмотреть наше меню</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured">
+      <h2>Рекомендуемые продукты</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pixabay.com/photo/2017/06/30/21/49/bread-2459926_1280.jpg"
+            alt="Cake"
+          />
+          <h3>Вкусные Торты</h3>
+          <p>
+            Наши торты сделаны с любовью и только из самых свежих продуктов. Пытаться
+            один сегодня!
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pixabay.com/photo/2016/05/10/09/14/cookies-1383304_1280.jpg"
+            alt="Pastry"
+          />
+          <h3>Слоеная выпечка</h3>
+          <p>
+            Наша слоеная и маслянистая выпечка станет идеальным началом дня.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pixabay.com/photo/2018/05/03/14/50/muffins-3371523_1280.jpg"
+            alt="Dessert"
+          />
+          <h3>Инновационные десерты</h3>
+          <p>
+            Наши десерты всегда раздвигают границы возможного.
+            выпечка.
+          </p>
+        </div>
+    </div>
+  </div>
+
+    <div class="footer">
+      <p> Авторские права &copy; Foxy Bake</p>
+    </div>
+</body>
+
+{% endblock %}

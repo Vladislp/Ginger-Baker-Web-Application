@@ -7,6 +7,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from os import path
 from flask_login import LoginManager
+from flask_babelex import Babel, gettext
 
 # Way to initialise database object (To modify)
 db = SQLAlchemy()
@@ -22,6 +23,9 @@ def create_app():
     # Telling flask, where are we storing our database, in Website folder
     # f beforehand --> evaluate as a string
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+    app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+    babel = Babel(app)
+
 
     db.init_app(app)
 
