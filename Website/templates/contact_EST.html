@@ -1,33 +1,37 @@
-{% extends "base_EST.html" %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} Kontakt {% endblock %} </title>
+  </head>
+  {% extends "base_EST.html" %}
 
-{% block title %}Kontakt{% endblock %}
-
-{% block content %}
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{{ url_for('static', filename='styles/contact.css') }}"
-/>
-<body>
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.955829356235!2d24.799220915841975!3d59.40044941236051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692eb40ae95bf5d%3A0x5e557f2426b8325c!2sSuurekivi%20tee%2064%2C%20Peetri%2C%2075312%20Harju%20maakond!5e0!3m2!1sru!2see!4v1675779119102!5m2!1sru!2see"
-      width="600"
-      height="450"
-      style="border:2;"
-      allowfullscreen
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-    <!-- Container for contact information -->
-    <div class="info-container">
-      <h2>Kontakt info</h2>
-      <p>Aadress: 123 Main Street, Your City, Your Postal Code</p>
-      <p>Telefon: (123) 456-7890</p>
-      <p>Meil: contact@yourdomain.com</p>
-      <p>Lahtiolekuajad: Monday-Friday 9:00am-5:00pm</p>
+  {% block content %}
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='styles/contact.css') }}"
+  />
+  <body>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.955829356235!2d24.799220915841975!3d59.40044941236051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692eb40ae95bf5d%3A0x5e557f2426b8325c!2sSuurekivi%20tee%2064%2C%20Peetri%2C%2075312%20Harju%20maakond!5e0!3m2!1sru!2see!4v1675779119102!5m2!1sru!2see"
+        width="600"
+        height="450"
+        style="border:2;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
-</body>
-
+      <div class="info-container">
+        <h2>Kontakt info</h2>
+        <p>Aadress: 123 Main Street, Your City, Your Postal Code</p>
+        <p>Telefon: (123) 456-7890</p>
+        <p>Meil: contact@yourdomain.com</p>
+        <p>Lahtiolekuajad: Monday-Friday 9:00am-5:00pm</p>
+      </div>
+  </body>
+</html>
 {% endblock %}

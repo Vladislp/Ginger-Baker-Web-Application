@@ -1,14 +1,15 @@
-
-<!--This template is going to be exact same as base.html-->
-<!--And we can override every block that were defined inside base.html-->
-{% extends "base.html"%}
-<!--If we rename this block called "Home" we should see changes in result-->
-<!--Easy way to rename stuff-->
-{% block title %}Cart{% endblock %}
-
-{% block content %}
-
-<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/cart.css') }}">
-
-
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %} Home {% endblock %} </title>
+    </head>
+    {% extends "base.html" %}
+    {% block title %} Cart {% endblock %}
+    {% block content %}
+        <link rel="stylesheet"
+              type="text/css"
+              href="{{ url_for('static',filename='styles/cart.css') }}">
+    {% endblock %}
+</html>

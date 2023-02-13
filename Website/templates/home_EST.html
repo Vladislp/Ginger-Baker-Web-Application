@@ -1,22 +1,25 @@
-<!--This template is going to be exact same as base.html-->
-<!--And we can override every block that were defined inside base.html-->
-{% extends "base_EST.html"%}
-<!--If we rename this block called "Home" we should see changes in result-->
-<!--Easy way to rename stuff-->
-{% block title %}Meist{% endblock %} {% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{{ url_for('static',filename='styles/home.css') }}"
-/>
-<body>
-  <div class="container">
-      <div class="header">
-        <h1>Tervitame teid meie Dreamy Fox Bakery & Cafe</h1>
-        <p>Armastusega valmistatud värsked küpsetatud maiuspalad</p>
-      </div>
-  </div>
+  {% extends "base_EST.html"%}
+  {% block title %}Meist{% endblock %} {% block content %}
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/home.css') }}"
+  />
+  <body>
+    <div class="container">
+        <div class="header">
+          <h1>Tervitame teid meie Dreamy Fox Bakery & Cafe</h1>
+          <p>Armastusega valmistatud värsked küpsetatud maiuspalad</p>
+        </div>
+    </div>
     
     <div class="container">
       <div class="row">
