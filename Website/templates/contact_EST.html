@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="est">
   <head>
-    <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %} Kontakt {% endblock %} </title>
+    <meta charset="utf-8" />
+    <!--Facebook Open Graph (Google)-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Kas teil on küsimusi või muresid? Kas soovite rääkida [Teie ettevõtte nimi] esindajaga? Vaadake meie kontaktide lehte. Pakume mitut võimalust ühendust võtta ja ootame alati oma klientide arvamust. Ärge kõhelge täna ühendust võtta!" />
+    <meta name="keywords" content="Kontakt" />
+    <meta name="author" content="Vladislav Paskevits" />
+
+    <!--Facebook Open Graph (Facebook)-->
+    <meta property="og:title" content="Menu" />
+    <meta property="og:type" content="webpage" />
+    <meta property="og:image" content="goods" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+
+    <title>{% block title %} Kontakt {% endblock title %} </title>
+
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='styles/contact.css') }}"
+    />
+
   </head>
   {% extends "base_EST.html" %}
 
   {% block content %}
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="{{ url_for('static', filename='styles/contact.css') }}"
-  />
+  
   <body>
     <div class="map-container">
       <iframe
@@ -34,4 +49,5 @@
       </div>
   </body>
 </html>
-{% endblock %}
+
+{% endblock content %}

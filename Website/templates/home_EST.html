@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="est">
   <head>
-    <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+    <meta charset="utf-8" />
+    <!--Facebook Open Graph (Google)-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Nautige meie pagariäris värskelt küpsetatud tooteid ja maitsvaid hõrgutisi. Klassikalistest sarvesaiadest kuni käsitööleivani – meil on igaühele midagi. Külastage meid juba täna ja rahuldage oma magusaisu!" />
+    <meta name="keywords" content="Tere tulemast, Pagariäri, Maiustused, Banaanileib" />
+    <meta name="author" content="Vladislav Paskevits" />
 
-  {% extends "base_EST.html"%}
-  {% block title %}Meist{% endblock %} {% block content %}
+    <!--Facebook Open Graph (Facebook)-->
+    <meta property="og:title" content="Menu" />
+    <meta property="og:type" content="webpage" />
+    <meta property="og:image" content="goods" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
 
-  <link
+    <title>{% block title %} Meist {% endblock title %} </title>
+
+    <link
     rel="stylesheet"
     type="text/css"
     href="{{ url_for('static',filename='styles/home.css') }}"
-  />
+    />
+  </head>
+
+  {% extends "base_EST.html" %}
+
+  {% block content %}
+
   <body>
     <div class="container">
         <div class="header">
@@ -24,7 +39,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <img src="bakery-shop-image.jpg" alt="" />
+          <img src="bakery-shop-image.jpg" alt="" height="" width="" />
         </div>
         <div class="col-md-6">
           <h2>Meie pagariärist</h2>
@@ -36,7 +51,7 @@
             uuenduslikud magustoidud, meie kaupluses on igaühele midagi
             pagariäri.
           </p>
-          <a href="/menu" class="btn btn-primary">Vaadake meie menüüd</a>
+          <a href="{{ url_for('views.menu_EST') }}" class="btn btn-primary">Vaadake meie menu</a>
         </div>
       </div>
     </div>
@@ -48,6 +63,8 @@
           <img
             src="https://cdn.pixabay.com/photo/2017/06/30/21/49/bread-2459926_1280.jpg"
             alt="Cake"
+            width=""
+            height=""
           />
           <h3>Maitsvad koogid</h3>
           <p>
@@ -59,6 +76,8 @@
           <img
             src="https://cdn.pixabay.com/photo/2016/05/10/09/14/cookies-1383304_1280.jpg"
             alt="Pastry"
+            width=""
+            height=""
           />
           <h3>Helbed küpsetised</h3>
           <p>
@@ -69,6 +88,8 @@
           <img
             src="https://cdn.pixabay.com/photo/2018/05/03/14/50/muffins-3371523_1280.jpg"
             alt="Dessert"
+            width=""
+            height=""
           />
           <h3>Uuenduslikud magustoidud</h3>
           <p>
@@ -80,8 +101,9 @@
   </div>
 
     <div class="footer">
-      <p> Autoriõigus &copy; Foxy Bake</p>
+      <p> Autoriõigus © Foxy Bake</p>
     </div>
 </body>
 
-{% endblock %}
+{% endblock content %}
+</html>

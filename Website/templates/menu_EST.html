@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="est">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    {% extends "base_EST.html" %}
-    <!--If we rename this block called "Home" we should see changes in result-->
-    <!--Easy way to rename stuff-->
-    {% block title %}Menüü{% endblock %}
-    {% block content %}
+        <meta charset="utf-8" />
+        <!--Facebook Open Graph (Google)-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Nautige meie pagariäris värskelt küpsetatud tooteid ja maitsvaid hõrgutisi. Klassikalistest sarvesaiadest kuni käsitööleivani – meil on igaühele midagi. Külastage meid juba täna ja rahuldage oma magusaisu!" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Vladislav Paskevits" />
+        <!--Facebook Open Graph (Facebook)-->
+        <meta property="og:title" content="Menu" />
+        <meta property="og:type" content="webpage" />
+        <meta property="og:image" content="goods" />
+        <meta property="og:url" content="" />
+        <meta property="og:description" content="" />
+        <title>{% block title %} Menüü {% endblock title %} </title>
+
         <link rel="stylesheet"
               type="text/css"
-              href="{{ url_for('static',filename='styles/menu.css') }}">
+              href="{{ url_for('static',filename='styles/menu.css') }}" />
+    </head>
+    {% extends "base_EST.html" %}
+
+    {% block content %}
+
         <body>
             <head>
                 <script type="text/javascript"
@@ -25,7 +36,10 @@
                     <div class="shop-item">
                         <span class="shop-item-title">Banaanileib</span>
                         <img class="shop-item-image"
-                             src="https://images.pexels.com/photos/1277202/pexels-photo-1277202.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                            height=""
+                            width=""
+                            alt=""
+                            src="https://images.pexels.com/photos/1277202/pexels-photo-1277202.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                         <div class="shop-item-details">
                             <span class="shop-item-price">€6.66</span>
                             <button class="btn btn-primary shop-item-button" type="button">LISA OSTUKORVI</button>
@@ -34,7 +48,10 @@
                     <div class="shop-item">
                         <span class="shop-item-title">Šokolaadiküpsis</span>
                         <img class="shop-item-image"
-                             src="https://images.unsplash.com/photo-1532499016263-f2c3e89de9cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80">
+                            height=""
+                            width=""
+                            alt=""
+                            src="https://images.unsplash.com/photo-1532499016263-f2c3e89de9cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
                         <div class="shop-item-details">
                             <span class="shop-item-price">€14.99</span>
                             <button class="btn btn-primary shop-item-button"type="button">LISA OSTUKORVI</button>
@@ -54,10 +71,7 @@
                     <strong class="cart-total-title">Kokku</strong>
                     <span class="cart-total-price">€0</span>
                 </div>
-                <form action="/payment" method="POST">
-                    <!-- <button class="btn btn-primary btn-purchase" type="submit">PURCHASE</button> -->
-                </form>
             </section>
         </body>
-    {% endblock %}
+    {% endblock content %}
 </html>

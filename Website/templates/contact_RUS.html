@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="rus">
   <head>
-    <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %} Контакт {% endblock %} </title>
+    <meta charset="utf-8" />
+    <!--Facebook Open Graph (Google)-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="«Свяжитесь с [название вашей компании] сегодня и дайте нам знать, как мы можем вам помочь. От общих запросов до конкретных запросов наша команда стремится предоставить быстрые и полезные ответы. Мы с нетерпением ждем вашего ответа и построения прочных отношений»." />
+    <meta name="keywords" content="Контакт" />
+    <meta name="author" content="Владислав Пашкевич" />
+
+    <!--Facebook Open Graph (Facebook)-->
+    <meta property="og:title" content="Menu" />
+    <meta property="og:type" content="webpage" />
+    <meta property="og:image" content="goods" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+
+    <title>{% block title %} Контакт {% endblock title %} </title>
+
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='styles/contact.css') }}"
+    />
+
   </head>
 
   {% extends "base_RUS.html" %}
 
   {% block content %}
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="{{ url_for('static', filename='styles/contact.css') }}"
-  />
+
   <body>
     <div class="map-container">
       <iframe
@@ -36,6 +51,6 @@
       </div>
   </body>
 
-  {% endblock %}
+  {% endblock content %}
   
 </html>

@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+    <meta charset="utf-8" />
+    <!--Facebook Open Graph (Google)-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Welcome to Dreamy Foxy - your ultimate destination for baking goods. Discover [unique value proposition], explore our [products/services], and join our community of [target audience]. Start your journey today!" />
+    <meta name="keywords" content="Welcome, Bakery, Sweets, BananaBread" />
+    <meta name="author" content="Vladislav Paskevits" />
+    <!--Facebook Open Graph (Facebook)-->
+    <meta property="og:title" content="Menu" />
+    <meta property="og:type" content="webpage" />
+    <meta property="og:image" content="goods" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
 
-  {% extends "base.html"%}
-  {% block title %}About{% endblock %} {% block content %}
+    <title>{% block title %} About {% endblock title %} </title>
 
-  <link
+    <link
     rel="stylesheet"
     type="text/css"
     href="{{ url_for('static',filename='styles/home.css') }}"
-  />
+    />
+  </head>
+
+  {% extends "base.html" %}
+
+  {% block content %}
+  
   <body>
     <div class="container">
         <div class="header">
@@ -24,7 +38,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img src="bakery-shop-image.jpg" alt="" />
+            <img src="bakery-shop-image.jpg" alt="" height="" width="" />
           </div>
           <div class="col-md-6">
             <h2>About Our Bakery</h2>
@@ -36,7 +50,7 @@
               innovative desserts, there's something for everyone here at our
               bakery.
             </p>
-            <a href="/menu" class="btn btn-primary">View Our Menu</a>
+            <a href="{{ url_for('views.menu') }}" class="btn btn-primary">View Our Menu</a>
           </div>
         </div>
       </div>
@@ -48,6 +62,8 @@
             <img
               src="https://cdn.pixabay.com/photo/2017/06/30/21/49/bread-2459926_1280.jpg"
               alt="Cake"
+              height=""
+              width=""
             />
             <h3>Delicious Cakes</h3>
             <p>
@@ -59,6 +75,8 @@
             <img
               src="https://cdn.pixabay.com/photo/2016/05/10/09/14/cookies-1383304_1280.jpg"
               alt="Pastry"
+              height=""
+              width=""
             />
             <h3>Flaky Pastries</h3>
             <p>
@@ -69,6 +87,8 @@
             <img
               src="https://cdn.pixabay.com/photo/2018/05/03/14/50/muffins-3371523_1280.jpg"
               alt="Dessert"
+              height=""
+              width=""
             />
             <h3>Innovative Desserts</h3>
             <p>
@@ -80,9 +100,10 @@
     </div>
 
       <div class="footer">
-        <p> Copyright &copy; Foxy Bake</p>
+        <p> Copyright © Foxy Bake</p>
       </div>
   </body>
 
-  {% endblock %}
+  {% endblock content %}
+
 </html>

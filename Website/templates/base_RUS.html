@@ -1,142 +1,150 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="stylesheet"
+<html lang="rus">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+          content="«Найдите все, что вам нужно, и многое другое на [название вашего веб-сайта]. Наша платформа предлагает широкий выбор [продуктов/услуг], тщательно отобранных для удовлетворения потребностей [вашей целевой аудитории]. С [уникальным ценностным предложением] и приверженностью к удовлетворению клиентов, мы уверены, что [название вашего веб-сайта] — идеальный выбор для всех, кто ищет [то, что предлагает ваш веб-сайт]. Посетите нас сегодня и откройте для себя возможности!»"/>
+    <meta name="keywords" content="Пекарня, Место назначения, Товары" />
+    <meta name="author" content="Владислав Пашкевич" />
+    <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-          crossorigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
+          crossorigin="anonymous"/>
+    <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-          crossorigin="anonymous"
-        />
-        <link 
-          rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"
-        />
-        <link
-          rel="stylesheet"
+          crossorigin="anonymous"/>
+    <link rel="shortcut icon"
+          href="{{ url_for('static', filename='favicon.ico') }}"/>
+    <link rel="stylesheet"
           type="text/css"
-          href="{{ url_for('static',filename='styles/base.css') }}"
-        />
-          <!--Templating engine / Jenga-->
-        <!--When you are writing block (for loop) or smth...you put them here-->
-        <title>{% block title %}Home{% endblock %} </title>
-    </head>
-
-    <body>
-      <div class="header-top">
-        <ul class="header-languages">
-          <ul class="language-switcher-locale-url">
-            <li class="en">
-              <a href="/">ENG</a>
-            </li>
-            <li class="ee">
-              <a href="/home_EST">EST</a>
-            </li>
-            <li class="ru">
-              <a href="/home_RUS">RUS</a>
-            </li>
-          </ul>
-        </ul>
-        <ul class="header-icons">
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/">
-              <i class="fa fa-facebook">
-              </i>
-            </a>
+          href="{{ url_for('static',filename='styles/base.css') }}"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript"
+            src="{{ url_for('static', filename='index.js') }}"></script>
+    <title>
+      {% block title %}
+        Home
+      {% endblock title %}
+    </title>
+  </head>
+  <body>
+    <div class="header-top">
+      <ul class="header-languages">
+        <ul class="language-switcher-locale-url">
+          <li class="en">
+            <a href="{{ url_for('views.home') }}">ENG</a>
           </li>
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkein.com/">
-              <i class="fa fa-linkedin">   
-              </i>
-            </a>
+          <li class="ee">
+            <a href="{{ url_for('views.home_EST') }}">EST</a>
           </li>
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/">
-              <i class="fa fa-instagram">
-              </i>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/">
-              <i class="fa fa-twitter">
-              </i>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.telegram.com/">
-              <i class="fa fa-telegram">
-              </i>
-            </a>
+          <li class="ru">
+            <a href="{{ url_for('views.home_RUS') }}">RUS</a>
           </li>
         </ul>
-      </div>
-      <div class="header-bottom">
-        <a class="header-logo" href="/">
-          <img src="https://i.pinimg.com/736x/e2/c7/09/e2c709bbf86bef7787d16018785d15db.jpg" alt="Logo">
-        </a>
-        <nav class="header-navigation">
-          <ul class="header-navigation-ul">
-            <li><a href="/home_RUS">О нас</a></li>
-            <li><a href="/menu_RUS">Меню</a></li>
-            <li><a href="/contact_RUS">Контакт</a></li>   
+      </ul>
+      <ul class="header-icons">
+        <li>
+          <a target="_blank"
+             rel="noopener noreferrer"
+             href="https://www.facebook.com/">
+            <i class="fa fa-facebook">
+            </i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank"
+             rel="noopener noreferrer"
+             href="https://www.linkein.com/">
+            <i class="fa fa-linkedin">
+            </i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank"
+             rel="noopener noreferrer"
+             href="https://www.instagram.com/">
+            <i class="fa fa-instagram">
+            </i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank"
+             rel="noopener noreferrer"
+             href="https://www.twitter.com/">
+            <i class="fa fa-twitter">
+            </i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank"
+             rel="noopener noreferrer"
+             href="https://www.telegram.com/">
+            <i class="fa fa-telegram">
+            </i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="header-bottom">
+      <a class="header-logo"href="{{ url_for('views.home_RUS') }}">
+        <img src="https://i.pinimg.com/736x/e2/c7/09/e2c709bbf86bef7787d16018785d15db.jpg"
+             alt="Logo"
+             height=""
+             width=""/>
+      </a>
+      <nav class="header-navigation">
+        <ul class="header-navigation-ul">
+          <li>
+            <a href="{{ url_for('views.home_RUS') }}">О нас</a>
+          </li>
+          <li>
+            <a href="{{ url_for('views.menu_RUS') }}">Меню</a>
+          </li>
+          <li>
+            <a href="{{ url_for('views.contact_RUS') }}">Контакт</a>
+          </li>
         </ul>
-        </nav>
-      </div>
-      </div>
-      {% with messages = get_flashed_messages(with_categories=true) %}
+      </nav>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
       <!--We loop now all messages and show them in the page-->
       {% if messages %}
         {% for category, message in messages %}
-        {% if category == 'error' %}
-        <!--Display the message, whatever it is-->
-        <div class='alert alert-dark alter-dismissable fade show' role="alert" style="position:absolute; left: 20%; transform: translate(-50%, 30%);">
-          {{ message }}
-          <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        {% else %}
-        <div class="alert alert-dark alter-dismissable fade show" role="alert">
-          {{ message }}
-          <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        {% endif %}
+          {% if category == 'error' %}
+            <!--Display the message, whatever it is-->
+            <div class="alert alert-dark alter-dismissable fade show"
+                 role="alert"
+                 style="position:absolute;
+                        left: 20%;
+                        transform: translate(-50%, 30%)">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+          {% else %}
+            <div class="alert alert-dark alter-dismissable fade show" role="alert">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+          {% endif %}
         {% endfor %}
       {% endif %}
-      {% endwith %}
-
-
-      <div class="container">{% block content %} {% endblock %}</div>
-
-
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      type="text/javascript"
-      src="{{ url_for('static', filename='index.js') }}"
-    ></script>
-
-
-    </body>
+    {% endwith %}
+    <div class="container">
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </body>
 </html>

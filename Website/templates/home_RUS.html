@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="rus">
   <head>
-    <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+    <meta charset="utf-8" />
+    <!--Facebook Open Graph (Google)-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="«Зайдите на [название вашего веб-сайта] и откройте для себя мир [цели вашего веб-сайта]. Мы предлагаем [уникальное ценностное предложение] нашей [целевой аудитории], все в одном месте. мыслящих людей, и начните свой путь к [цели] сегодня!»" />
+    <meta name="keywords" content="добро пожаловать, Пекарня, Сладости, Банановый хлеб" />
+    <meta name="author" content="Владислав Пашкевич" />
 
-  {% extends "base_RUS.html"%}
-  {% block title %}О нас{% endblock %} {% block content %}
+    <!--Facebook Open Graph (Facebook)-->
+    <meta property="og:title" content="Menu" />
+    <meta property="og:type" content="webpage" />
+    <meta property="og:image" content="goods" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
 
-  <link
+    <title>{% block title %} О нас {% endblock title %} </title>
+
+    <link
     rel="stylesheet"
     type="text/css"
     href="{{ url_for('static',filename='styles/home.css') }}"
-  />
+    />
+  </head>
+
+  {% extends "base_RUS.html" %}
+
+  {% block content %}
+
   <body>
     <div class="container">
         <div class="header">
@@ -24,7 +39,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img src="bakery-shop-image.jpg" alt="" />
+            <img src="bakery-shop-image.jpg" alt="" height="" width="" />
           </div>
           <div class="col-md-6">
             <h2>О нашей пекарне</h2>
@@ -36,7 +51,7 @@
               инновационные десерты, каждый найдет что-то для себя в нашем
               пекарня.
             </p>
-            <a href="/menu" class="btn btn-primary">Посмотреть наше меню</a>
+            <a href="{{ url_for('views.menu_RUS') }}" class="btn btn-primary">Посмотреть наше меню</a>
           </div>
         </div>
       </div>
@@ -48,6 +63,8 @@
             <img
               src="https://cdn.pixabay.com/photo/2017/06/30/21/49/bread-2459926_1280.jpg"
               alt="Cake"
+              height=""
+              width=""
             />
             <h3>Вкусные Торты</h3>
             <p>
@@ -59,6 +76,8 @@
             <img
               src="https://cdn.pixabay.com/photo/2016/05/10/09/14/cookies-1383304_1280.jpg"
               alt="Pastry"
+              height=""
+              width=""
             />
             <h3>Слоеная выпечка</h3>
             <p>
@@ -69,6 +88,8 @@
             <img
               src="https://cdn.pixabay.com/photo/2018/05/03/14/50/muffins-3371523_1280.jpg"
               alt="Dessert"
+              height=""
+              width=""
             />
             <h3>Инновационные десерты</h3>
             <p>
@@ -80,9 +101,10 @@
     </div>
 
       <div class="footer">
-        <p> Авторские права &copy; Foxy Bake</p>
+        <p> Авторские права © Foxy Bake</p>
       </div>
   </body>
-</html>
 
-{% endblock %}
+{% endblock content %}
+
+</html>

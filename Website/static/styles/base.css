@@ -6,7 +6,13 @@
   padding: 0;
 }
 
-html, body, p, ol, ul, li, header {
+html,
+body,
+p,
+ol,
+ul,
+li,
+header {
   border: 0;
   font: inherit;
   font-size: 100%;

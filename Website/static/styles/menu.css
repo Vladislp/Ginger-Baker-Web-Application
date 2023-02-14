@@ -3,8 +3,9 @@
     color: #777;
 }
 
-html, body {
-   font-family: "Playfair Display";
+html,
+body {
+    font-family: "Playfair Display";
 
     background-image: url(https://cdn.pixabay.com/photo/2021/01/31/13/07/croissants-5966836_1280.jpg);
     background-attachment: fixed;
@@ -24,12 +25,14 @@ html, body {
 .nav a {
     display: inline-block;
     padding: .5em;
-    color: black; /* Change color here */
+    color: black;
+    /* Change color here */
     text-decoration: none;
 }
 
 .nav a:hover {
-    background-color: white; /* Change color here */
+    background-color: white;
+    /* Change color here */
 }
 
 .main-nav {
@@ -69,6 +72,7 @@ html, body {
     margin: 0 auto;
     padding: 0 1.5em;
 }
+
 .section-header {
     font-family: "Metal Mania";
     font-weight: normal;

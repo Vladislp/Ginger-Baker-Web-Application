@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %} Home {% endblock %} </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Review and edit your shopping cart with ease on our platform. Add or remove items, adjust quantities, and confirm your order before checking out. Enjoy a seamless shopping experience with [Your Website Name] and bring your purchases to your doorstep in no time!" />
+        <meta name="keywords" content="Cart" />
+        <meta name="author" content="Vladislav Paskevits" />
+
+        <title>{% block title %} Cart {% endblock title %} </title>
+
+        <link rel="stylesheet"
+        type="text/css"
+        href="{{ url_for('static',filename='styles/cart.css') }}" />
+
     </head>
     {% extends "base.html" %}
-    {% block title %} Cart {% endblock %}
+
     {% block content %}
-        <link rel="stylesheet"
-              type="text/css"
-              href="{{ url_for('static',filename='styles/cart.css') }}">
-    {% endblock %}
+       
+    {% endblock content %}
 </html>
