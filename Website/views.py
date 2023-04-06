@@ -16,7 +16,6 @@ views = Blueprint('views', __name__)
 
 @views.route('/notes', methods=['GET', 'POST'])
 # Now you can not get to the home page, unless you are login
-@login_required
 # This function will whenever we go to the slash route 
 def notes():
     if request.method == 'POST':
@@ -48,7 +47,6 @@ def delete_note():
 # '/' --> route
 @views.route('/', methods=['GET', 'POST'])
 # Now you can not get to the home page, unless you are login
-@login_required
 # This function will whenever we go to the slash route 
 def home():
     # We will be able to check, if we have authenticated
@@ -56,7 +54,6 @@ def home():
 
 
 @views.route('/menu', methods=['GET', 'POST'])
-@login_required
 def menu():
     return render_template("menu.html", user=current_user)
 
@@ -70,7 +67,6 @@ def add_to_cart():
 
 @views.route('/home_EST', methods=['GET', 'POST'])
 # Now you can not get to the home page, unless you are login
-@login_required
 # This function will whenever we go to the slash route 
 def home_EST():
     # We will be able to check, if we have authenticated
@@ -78,7 +74,6 @@ def home_EST():
 
 @views.route('/contact_EST', methods=['GET', 'POST'])
 # Now you can not get to the home page, unless you are login
-@login_required
 # This function will whenever we go to the slash route 
 def contact_EST():
     # We will be able to check, if we have authenticated
@@ -86,7 +81,6 @@ def contact_EST():
 
 @views.route('/menu_EST', methods=['GET', 'POST'])
 # Now you can not get to the home page, unless you are login
-@login_required
 # This function will whenever we go to the slash route 
 def menu_EST():
     # We will be able to check, if we have authenticated
@@ -94,7 +88,6 @@ def menu_EST():
 
 @views.route('/home_RUS', methods=['GET', 'POST'])
 # Now you can not get to the home page, unless you are login
-@login_required
 # This function will whenever we go to the slash route 
 def home_RUS():
     # We will be able to check, if we have authenticated
@@ -102,7 +95,6 @@ def home_RUS():
 
 @views.route('/menu_RUS', methods=['GET', 'POST'])
 # Now you can not get to the home page, unless you are login
-@login_required
 # This function will whenever we go to the slash route 
 def menu_RUS():
     # We will be able to check, if we have authenticated
@@ -110,7 +102,6 @@ def menu_RUS():
 
 @views.route('/contact_RUS', methods=['GET', 'POST'])
 # Now you can not get to the home page, unless you are login
-@login_required
 # This function will whenever we go to the slash route 
 def contact_RUS():
     # We will be able to check, if we have authenticated
