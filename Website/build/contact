@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--Facebook Open Graph (Google)-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Get in touch with us at [Your Company Name]. Our dedicated team is here to answer your questions, offer support, and provide the information you need. Whether you prefer email, phone, or social media, we're ready to connect with you and help in any way we can." />
+    <meta name="keywords" content="Contact" />
+    <meta name="author" content="Vladislav Paskevits" />
+
+    <!--Facebook Open Graph (Facebook)-->
+    <meta property="og:title" content="Menu" />
+    <meta property="og:type" content="webpage" />
+    <meta property="og:image" content="goods" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+
+    <title> Contact  </title>
+
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/styles/contact.css"
+    />
+
+  </head>
+
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+          content="Welcome to [Your Website Name], your go-to destination for [what your website offers]. Our platform offers a user-friendly experience, [unique value proposition], and a vast array of [products/services]. Explore our website today and discover why [Your Website Name] is the perfect choice for [your target audience]!"/>
+    <meta name="keywords" content="Bakery, Destination, Goods" />
+    <meta name="author" content="Vladislav Paskevits" />
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous"/>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          crossorigin="anonymous"/>
+    <link rel="shortcut icon"
+          href="/static/favicon.ico"/>
+    <link rel="stylesheet"
+          type="text/css"
+          href="/static/styles/base.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript"
+            src="/static/index.js"></script>
+    <title>
+       Contact 
+    </title>
+  </head>
+  <body>
+    <div class="header-top">
+      <ul class="header-languages">
+        <ul class="language-switcher-locale-url">
+          <li class="en">
+            <a href="/">ENG</a>
+          </li>
+          <li class="ee">
+            <a href="/home_EST">EST</a>
+          </li>
+          <li class="ru">
+            <a href="/home_RUS">RUS</a>
+          </li>
+        </ul>
+      </ul>
+      <ul class="header-icons">
+        <li>
+          <a target="_blank"
+             rel="noopener noreferrer"
+             href="https://www.facebook.com/vlad.paskevits">
+            <i class="fa fa-facebook">
+            </i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank"
+             rel="noopener noreferrer"
+             href="https://www.linkedin.com/in/vladislav-pa%C5%A1kevit%C5%A1-295b7823a/">
+            <i class="fa fa-linkedin">
+            </i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank"
+             rel="noopener noreferrer"
+             href="https://github.com/Vladislp/Ginger-Baker-Web-Application">
+            <i class="fa fa-github">
+            </i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="header-bottom">
+      <a class="header-logo"href="/">
+        <img src="https://i.pinimg.com/736x/e2/c7/09/e2c709bbf86bef7787d16018785d15db.jpg"
+             alt="Logo"
+             height=""
+             width=""/>
+      </a>
+      <nav class="header-navigation">
+        <ul class="header-navigation-ul">
+          <li>
+            <a href="/">About</a>
+          </li>
+          <li>
+            <a href="/menu">Menu</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
+      <!--We loop now all messages and show them in the page-->
+      
+    
+    <div class="container">
+      
+  
+  <body>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.955829356235!2d24.799220915841975!3d59.40044941236051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692eb40ae95bf5d%3A0x5e557f2426b8325c!2sSuurekivi%20tee%2064%2C%20Peetri%2C%2075312%20Harju%20maakond!5e0!3m2!1sru!2see!4v1675779119102!5m2!1sru!2see"
+        width="600"
+        height="450"
+        style="border:2;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+      <!-- Container for contact information -->
+      <div class="info-container">
+        <h2>Contact Information</h2>
+        <p>Address: 123 Main Street, Your City, Your Postal Code"</p>
+        <p>Phone: (123) 456-7890"</p>
+        <p>Email: contact@yourdomain.com"</p>
+        <p>Hours of Operation: Monday-Friday 9:00am-5:00pm"</p>
+      </div>
+  </body>
+
+  
+    </div>
+  </body>
+</html>

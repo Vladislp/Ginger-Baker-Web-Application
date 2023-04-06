@@ -1,0 +1,52 @@
+body {
+  background-image: url(https://cdn.pixabay.com/photo/2021/01/31/13/07/croissants-5966836_1280.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+  font-family: "Playfair Display";
+}
+
+iframe {
+  position: relative;
+  margin-top: 185px;
+  margin-right: 600px;
+}
+
+.map-container {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.flex-items:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.info-container {
+  width: 55%;
+  position: absolute;
+  right: 0;
+  top: 37%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 20px;
+  color: white;
+}

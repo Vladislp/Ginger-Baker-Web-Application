@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="est">
+  <head>
+    <meta charset="utf-8" />
+    <!--Facebook Open Graph (Google)-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Nautige meie pagariäris värskelt küpsetatud tooteid ja maitsvaid hõrgutisi. Klassikalistest sarvesaiadest kuni käsitööleivani – meil on igaühele midagi. Külastage meid juba täna ja rahuldage oma magusaisu!" />
+    <meta name="keywords" content="Tere tulemast, Pagariäri, Maiustused, Banaanileib" />
+    <meta name="author" content="Vladislav Paskevits" />
+
+    <!--Facebook Open Graph (Facebook)-->
+    <meta property="og:title" content="Menu" />
+    <meta property="og:type" content="webpage" />
+    <meta property="og:image" content="goods" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+
+    <title> Meist  </title>
+
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/styles/home.css"
+    />
+  </head>
+
+  <!DOCTYPE html>
+<html lang="est">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+          content="Avastage [oma veebisaidi nimi] abil uus võimaluste maailm. Meie platvorm pakub [ainulaadset väärtuspakkumist] ja on loodud selleks, et muuta [teie veebisaidi pakutav] kõigile kättesaadavamaks. Olenemata sellest, kas olete kogenud professionaal või uudishimulik algaja , [Teie veebisaidi nimi] sisaldab kõike, mida edu saavutamiseks vajate. Tutvuge meie [toodete/teenustega] juba täna!"/>
+    <meta name="keywords" content="Pagariäri, Sihtkoht, Kaubad" />
+    <meta name="author" content="Vladislav Paskevits" />
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous"/>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          crossorigin="anonymous"/>
+    <link rel="shortcut icon"
+          href="/static/favicon.ico"/>
+    <link rel="stylesheet"
+          type="text/css"
+          href="/static/styles/base.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+    <script type="text/javascript"
+          src="/static/index.js"></script>
+    <title>
+       Meist 
+    </title>
+  </head>
+  <body>
+    <div class="header-top">
+      <ul class="header-languages">
+        <ul class="language-switcher-locale-url">
+          <li class="en">
+            <a href="/">ENG</a>
+          </li>
+          <li class="ee">
+            <a href="/home_EST">EST</a>
+          </li>
+          <li class="ru">
+            <a href="/home_RUS">RUS</a>
+          </li>
+        </ul>
+      </ul>
+      <ul class="header-icons">
+        <li>
+          <a target="_blank"
+             rel="noopener noreferrer"
+             href="https://www.facebook.com/vlad.paskevits">
+            <i class="fa fa-facebook">
+            </i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank"
+             rel="noopener noreferrer"
+             href="https://www.linkedin.com/in/vladislav-pa%C5%A1kevit%C5%A1-295b7823a/">
+            <i class="fa fa-linkedin">
+            </i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank"
+             rel="noopener noreferrer"
+             href="https://github.com/Vladislp/Ginger-Baker-Web-Application">
+            <i class="fa fa-github">
+            </i>
+          </a>
+        </li>
+        <li>
+        </li>
+      </ul>
+    </div>
+    <div class="header-bottom">
+      <a class="header-logo"href="/home_EST">
+        <img src="https://i.pinimg.com/736x/e2/c7/09/e2c709bbf86bef7787d16018785d15db.jpg"
+             alt="Logo"
+             height=""
+             width=""/>
+      </a>
+      <nav class="header-navigation">
+        <ul class="header-navigation-ul">
+          <li>
+            <a href="/home_EST">Meist</a>
+          </li>
+          <li>
+            <a href="/menu_EST">Menu</a>
+          </li>
+          <li>
+            <a href="/contact_EST">Võta ühendust</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  
+    <!--We loop now all messages and show them in the page-->
+    
+  
+  <div class="container">
+    
+
+  <body>
+    <div class="container">
+        <div class="header">
+          <h1>Tervitame teid meie Dreamy Fox Bakery & Cafe</h1>
+          <p>Armastusega valmistatud värsked küpsetatud maiuspalad</p>
+        </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="bakery-shop-image.jpg" alt="" height="" width="" />
+        </div>
+        <div class="col-md-6">
+          <h2>Meie pagariärist</h2>
+          <p>
+            Meie pagariäris usume, et küpsetamine on kunstivorm ja viis
+            toovad inimeste ellu õnne. Kasutame ainult kõige värskemat
+            koostisosad ja olge nende valmistamisel väga ettevaatlik
+            meie küpsetised. Alates meie klassikalistest kookidest ja küpsetistest kuni meieni
+            uuenduslikud magustoidud, meie kaupluses on igaühele midagi
+            pagariäri.
+          </p>
+          <a href="/menu_EST" class="btn btn-primary">Vaadake meie menu</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured">
+      <h2>Soovitatavad tooted</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pixabay.com/photo/2017/06/30/21/49/bread-2459926_1280.jpg"
+            alt="Cake"
+            width=""
+            height=""
+          />
+          <h3>Maitsvad koogid</h3>
+          <p>
+            Meie koogid on valmistatud armastusega ja ainult kõige värskematest koostisosadest. Proovi
+            üks täna!
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pixabay.com/photo/2016/05/10/09/14/cookies-1383304_1280.jpg"
+            alt="Pastry"
+            width=""
+            height=""
+          />
+          <h3>Helbed küpsetised</h3>
+          <p>
+            Helbed ja võised – meie küpsetised on ideaalne algus teie päevale.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pixabay.com/photo/2018/05/03/14/50/muffins-3371523_1280.jpg"
+            alt="Dessert"
+            width=""
+            height=""
+          />
+          <h3>Uuenduslikud magustoidud</h3>
+          <p>
+            Meie magustoidud nihutavad alati võimaliku piire
+            küpsetamine.
+          </p>
+        </div>
+    </div>
+  </div>
+
+    <div class="footer">
+      <p> Autoriõigus © Foxy Bake</p>
+    </div>
+</body>
+
+
+  </div>
+</body>
+</html>

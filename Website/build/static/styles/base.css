@@ -1,0 +1,96 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+header {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+.header-top {
+  background-color: #00000053;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  justify-content: space-between;
+  padding: 0 80px;
+}
+
+.header-bottom,
+.header-top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+}
+
+.header-logo img {
+  display: flex;
+  height: 100px;
+  margin-top: 1px;
+}
+
+.header-icons li a i {
+  height: 17px;
+  width: 17px;
+}
+
+.header-languages {
+  list-style: none;
+  padding: 0;
+}
+
+.header-languages li {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  position: initial;
+}
+
+.header-languages li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.header-bottom {
+  background-color: #00000053;
+  height: 120px;
+  left: 0;
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header-icons li,
+.header-languages li,
+.header-navigation li {
+  cursor: pointer;
+  display: inline;
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+
+.header-navigation-ul li {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.header-navigation-ul li:not(:last-child) {
+  margin-right: 30px;
+}
