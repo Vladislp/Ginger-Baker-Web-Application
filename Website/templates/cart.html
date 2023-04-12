@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Review and edit your shopping cart with ease on our platform. Add or remove items, adjust quantities, and confirm your order before checking out. Enjoy a seamless shopping experience with [Your Website Name] and bring your purchases to your doorstep in no time!" />
-        <meta name="keywords" content="Cart" />
-        <meta name="author" content="Vladislav Paskevits" />
+<html lang="est" class="sr">
+  <head>
+    <meta charset="utf-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" >
+    <meta name="keywords" content="[Vladislp], [Vladislav Paskevits], pagariäri, rebane, kondiitritooted, omatehtu" >
+    <meta name="description" content="[Vladislav Paskevits] | Vaadake oma ostukorv meie platvormil hõlpsasti üle ja redigeerige seda. Lisage või eemaldage kaupu, kohandage koguseid ja kinnitage oma tellimus enne väljaregistreerimist. Nautige sujuvat ostukogemust bakingfox abil ja tooge oma ostud hetkega koju! " >
 
-        <title>{% block title %} Cart {% endblock title %} </title>
 
-        <link rel="stylesheet"
+    <title>{% block title %} Cart {% endblock title %} </title>
+
+    <link 
+        rel="stylesheet"
         type="text/css"
-        href="{{ url_for('static',filename='styles/cart.css') }}" />
+        href="{{ url_for('static',filename='styles/cart.css') }}" 
+    />
 
     </head>
     {% extends "base.html" %}

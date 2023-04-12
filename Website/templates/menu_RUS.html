@@ -4,9 +4,20 @@
         <meta charset="utf-8" />
         <!--Facebook Open Graph (Google)-->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Побалуйте себя свежей выпечкой и вкусными угощениями в нашей пекарне. От классических круассанов до домашнего хлеба — у нас каждый найдет что-то для себя. Приходите к нам сегодня и удовлетворить ваши пристрастия к сладкому!" />
+        <meta name="description" content=
+                "Побалуйте себя свежей выпечкой и вкусными угощениями в нашей пекарне. 
+                От классических круассанов до домашнего хлеба — у нас каждый найдет что-то для себя. 
+                Приходите к нам сегодня и удовлетворить ваши пристрастия к сладкому!" 
+        />
         <meta name="keywords" content="HTML, CSS, JavaScript" />
         <meta name="author" content="Владислав Пашкекич" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="shortcut icon" type="image/png" href="assets/favicon.png" >
+
         <!--Facebook Open Graph (Facebook)-->
         <meta property="og:title" content="Menu" />
         <meta property="og:type" content="webpage" />
@@ -19,20 +30,25 @@
         <link rel="stylesheet"
               type="text/css"
               href="{{ url_for('static',filename='styles/menu.css') }}" />
+
+        <script type="text/javascript"
+              src="{{ url_for('static', filename='menu.js') }}"
+              async>
+        </script>
     </head>
     {% extends "base_RUS.html" %}
 
     {% block content %}
             
         <body>
-            <head>
-                <script type="text/javascript"
-                        src="{{ url_for('static', filename='menu.js') }}"
-                        async></script>
-            </head>
-            <h1 class="shop-name">Наше меню</h1>
+            <div class="container">
+                <div class="header">
+                  <h1>Наше меню</h1>
+                  <p>Сладкое</p>
+                </div>
+            </div>
+
             <section class="menu-container content-section">
-                <h2 class="section-header">Сладости</h2>
                 <div class="shop-items">
                     <div class="shop-item">
                         <span class="shop-item-title">Банановый хлеб</span>

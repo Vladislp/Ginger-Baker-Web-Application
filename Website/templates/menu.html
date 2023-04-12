@@ -4,7 +4,11 @@
         <meta charset="utf-8" />
         <!--Facebook Open Graph (Google)-->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Indulge in freshly baked goods and delicious treats at our bakery. From classic croissants to artisanal bread, we have something for everyone. Visit us today and satisfy your sweet tooth!" />
+        <meta name="description" content=
+                "Indulge in freshly baked goods and delicious treats at our bakery. 
+                From classic croissants to artisanal bread, we have something for everyone. 
+                Visit us today and satisfy your sweet tooth!" 
+        />
         <meta name="keywords" content="HTML, CSS, JavaScript" />
         <meta name="author" content="Vladislav Paskevits" />
         <!--Facebook Open Graph (Facebook)-->
@@ -17,20 +21,26 @@
         <title>{% block title %} Menu {% endblock title %} </title>
 
         <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/menu.css') }}" />
+
+        <script 
+            type="text/javascript"
+            src="{{ url_for('static', filename='menu.js') }}"
+        async>
+        </script>
     </head>
     {% extends "base.html" %}
 
     {% block content %}
         
         <body>
-            <head>
-                <script type="text/javascript"
-                        src="{{ url_for('static', filename='menu.js') }}"
-                        async></script>
-            </head>
-            <h1 class="shop-name">Our menu</h1>
+            <div class="container">
+                <div class="header">
+                  <h1>Our menu</h1>
+                  <p>Sweets</p>
+                </div>
+            </div>
+
             <section class="menu-container content-section">
-                <h2 class="section-header">Sweets</h2>
                 <div class="shop-items">
                     <div class="shop-item">
                         <span class="shop-item-title">BananaBread</span>
@@ -70,7 +80,7 @@
                     <strong class="cart-total-title">Total</strong>
                     <span class="cart-total-price">€0</span>
                 </div>
-            </section>
+            </section> 
         </body>
     {% endblock content %}
 </html>

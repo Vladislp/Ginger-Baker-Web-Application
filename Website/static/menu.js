@@ -17,7 +17,6 @@ function ready() {
     To say when this is clicked, do smth
     */
     var removeCartItemsButtons = document.getElementsByClassName('btn-danger')
-    console.log(removeCartItemsButtons)
 
     /*
         Loop through all of the different buttons inside of our cart
@@ -81,7 +80,6 @@ function addToCartClicked(event) {
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
-    console.log(title, price, imageSrc)
     addItemToCart(title, price, imageSrc)
     updateCartTotall()
 }
